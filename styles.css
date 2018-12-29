@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(#9198e5, #B4045F);
+    overflow: hidden;
+}
+
+main {
+    background-image: url("konfetti.gif");
+    /* background-size: cover;   */
+    /* background-repeat: no-repeat; */
+    opacity: .35; 
+    position: relative;
+    height: 100vh;
+    
+}
+
+footer {
+    /* background-color: #E0E0E0; */
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    border-top: 1px solid #D1A114;
+}
+
+.label{
+    content: " ";
+    position: absolute;
+    background-image: url("label.png");
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 500px;
+    z-index: 5;
+    top: 35%;
+    left: 35%;
+}
+
+.balls {
+    content: "";
+    position: absolute;
+    top: -100px;
+    z-index: 6;
+    width: 100%;
+    background-image: url("balls.png");
+    height: 500px;
+}
+
+.santa {
+    position: absolute;
+    bottom: 45px;
+    background-image: url("santa-with-scooter.png");
+    left: 0;
+    content: "";
+    z-index: 6;
+    height: 143px;
+    width: 203px;
+    /* transform: translateX(800px);
+    transition-duration: 10s; */
+    animation: drive 5s infinite; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+   
+}
+
+@keyframes drive {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100vw); 
+    }
+}
